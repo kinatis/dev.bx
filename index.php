@@ -1,23 +1,36 @@
 <?php
+require 'movies.php';
 
-$socket = fsockopen("test.shelenkov.com", 80, $errorCode, $errorString);
-if (!$socket)
+
+while (1)
 {
-	echo "$errorCode ($errorString)<br />\n";
-	die();
+    echo "Введите свой возвраст: ";
+
+    $age = fgets(STDIN);
+    $age = rtrim($age);
+
+    if(is_numeric($age)and $age >=0 and $age < 150) {
+        showFilms($age,$movies);
+        break;
+    }
 }
 
-$result  = "" . "\r\n";
-$result .= "" . "\r\n";
-$result .= "" . "\r\n";
-$result .= "\r\n";
 
-fwrite($socket, $result);
-while (!feof($socket))
+function showFilms($age,$movies)
 {
-	echo fgets($socket);
+    $counter = 1;
+    foreach ($movies as $film){
+        if ($film["age_restriction"] <= $age) {
+            echo $counter.". ".$film["title"] . " (".$film["release_year"].") ,".$film["age_restriction"]."+. Rating - ".$film["rating"]."\n";
+            $counter++;
+        }
+    }
 }
-fclose($socket);
+
+
+
+
+
 
 
 
