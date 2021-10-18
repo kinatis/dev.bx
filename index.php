@@ -2,18 +2,18 @@
 require 'movies.php';
 
 
-while (1)
-{
-    echo "Введите свой возвраст: ";
 
-    $age = fgets(STDIN);
-    $age = rtrim($age);
+echo "Введите свой возвраст: ";
 
-    if(is_numeric($age)and $age >=0 and $age < 150) {
-        showFilms($age,$movies);
-        break;
-    }
+$age = fgets(STDIN);
+$age = rtrim($age);
+
+if(is_numeric($age)and $age >=0 and $age < 150) {
+    showFilms($age,$movies);
+}else{
+    echo "Неверные данные";
 }
+
 
 
 function showFilms($age,$movies)
