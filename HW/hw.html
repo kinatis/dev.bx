@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="wrapper-logo">
+                <div class="ellipse-wrapper">
+                    <div class="ellipse">
+
+                    </div>
+                </div>
+                <div class="logo">bitflix</div>
+
+            </div>
+
+
+            <div class="menu">
+                <ul>
+                    <li class="menu-item menu-item--active">
+                        <a href="#">Главная</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Сериалы</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Фильмы</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Новинки и популярное</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Мой список</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+
+
+        <div class="container">
+
+            <div class="header">
+                <div class="wrapper-search--bar">
+                    <div class="search-icon">
+                        <?xml version='1.0' encoding='iso-8859-1'?>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.1 26.1" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 26.1 26.1">
+                            <path d="m25.806,22.9l-5.4-5.4c-0.2-0.2-0.2-0.4-0.1-0.6 1.1-1.7 1.7-3.7 1.7-5.9 0-6.1-4.9-11-11-11s-11,4.9-11,11 4.9,11 11,11c2.2,0 4.2-0.6 5.9-1.7 0.2-0.1 0.5-0.1 0.6,0.1l5.4,5.4c0.4,0.4 1,0.4 1.4,0l1.4-1.4c0.5-0.5 0.5-1.1 0.1-1.5zm-14.7-4.9c-3.9,0-7-3.1-7-7s3.1-7 7-7 7,3.1 7,7-3.1,7-7,7z"/>
+                        </svg>
+                    </div>
+                    <input class="search-bar" placeholder="Поиск по каталогу...">
+
+
+                </div>
+                <div class="search-btn--wrapper">
+                    <button> Найти  </button>
+                </div>
+
+                <div class="addFilm-btn--wrapper">
+                    <button> Добавить фильм </button>
+                </div>
+
+            </div>
+            <div class="content">
+
+                <div class="movie-list">
+                    <div class="movie-list--item">
+                        <div class="movie-list--item-img"></div>
+                        <div class="movie-list--item-head">
+                            <div class="movie-list--item--title">Не время умирать (2021)</div>
+                            <div class="movie-list--item--subtitle">No Time to Die</div>
+                            <div class="movie-list--item-wrapper"></div>
+                        </div>
+                        <div class="movie-list--item-description">Джеймс Бонд оставил оперативную службу и наслаждается спокойной жизнью на Ямайке. Все меняется, когда на острове появляется его старый друг Феликс Лейтер из ЦРУ с просьбой о помощи.</div>
+                        <div class="movie-list--item-bottom">
+
+                            <div class="movie-list--item-time">
+                                <div class="icon-clock"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.58334 18.1667C14.3238 18.1667 18.1667 14.3238 18.1667 9.58334C18.1667 4.84289 14.3238 1 9.58334 1C4.84289 1 1 4.84289 1 9.58334C1 14.3238 4.84289 18.1667 9.58334 18.1667Z" stroke="#CCCCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.58337 4.90152V9.58334L12.7046 12.7046" stroke="#CCCCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></div>
+                                <p>163 мин. / 02:43</p>
+                            </div>
+                            <div class="movie-list--item-info"> боевик, триллер, приключения</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html><script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + '/jb-server-page?reloadServiceClientId=299');
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script>
