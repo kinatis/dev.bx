@@ -1,29 +1,27 @@
 <?php
+require "lib/template-function.php";
+require "resources/movies.php";
+require "config/config.php";
+require "lib/movie-list-function.php";
 
-$socket = fsockopen("test.shelenkov.com", 80, $errorCode, $errorString);
-if (!$socket)
+$templateContent = "";
+
+
+if (isset($_GET['search']))
 {
-	echo "$errorCode ($errorString)<br />\n";
-	die();
+    if(!empty($_GET['search'])){
+        $movies = findMovieByTitle($movies,$_GET['search']);
+    }
+}
+if(!$movies){
+    $templateContent.=renderTemplate("./resources/pages/empty-movie-list.php");
 }
 
-$result  = "" . "\r\n";
-$result .= "" . "\r\n";
-$result .= "" . "\r\n";
-$result .= "\r\n";
 
-fwrite($socket, $result);
-while (!feof($socket))
+foreach ($movies as $movie)
 {
-	echo fgets($socket);
+    $templateContent = $templateContent.renderTemplate("./resources/pages/movie-card.php", ['movies' => $movie]);
 }
-fclose($socket);
 
 
-
-
-
-
-
-
-
+renderLayout($templateContent,$genres,$side_bar_menu,'index');
