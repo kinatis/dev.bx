@@ -1,6 +1,6 @@
 <?php
 
-$side_bar_menu = [
+$sideBarMenu = [
     'index' => "Главная",
     'selected' => "Избранное"
 ];

@@ -237,6 +237,8 @@ body {
 }
 
 .movie-list--item {
+    display: flex;
+    justify-content: space-between;
     position: relative;
     width: 370px;
     height: 700px;
@@ -294,6 +296,7 @@ body {
     margin: 15px;
 }
 .movie-list--item-bottom {
+    height: 50px;
     display: flex;
     font-family: "Open Sans";
     font-style: normal;

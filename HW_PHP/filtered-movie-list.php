@@ -9,7 +9,7 @@ $templateContent = "";
 
 $genre = $genres[array_key_first($_GET)];
 
-$filteredMovies = filtratedMoveByGenres($movies,$genre);
+$filteredMovies = filterMovieByGenre($movies,$genre);
 
 
 foreach ($filteredMovies as $movie){
@@ -17,4 +17,4 @@ foreach ($filteredMovies as $movie){
 }
 
 
-renderLayout($templateContent, $genres, $side_bar_menu, array_key_first($_GET));
+renderLayout($templateContent, $genres, $sideBarMenu, array_key_first($_GET));

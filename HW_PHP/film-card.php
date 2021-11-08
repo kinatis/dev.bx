@@ -13,4 +13,4 @@ $templateContent = renderTemplate("./resources/pages/more-film.php",['movie' => 
 
 
 
-renderLayout($templateContent, $genres, $side_bar_menu, 'index');
+renderLayout($templateContent, $genres, $sideBarMenu, 'index');

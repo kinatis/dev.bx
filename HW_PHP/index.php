@@ -7,6 +7,9 @@ require "lib/movie-list-function.php";
 $templateContent = "";
 
 
+
+
+
 if (isset($_GET['search']))
 {
     if(!empty($_GET['search'])){
@@ -24,4 +27,4 @@ foreach ($movies as $movie)
 }
 
 
-renderLayout($templateContent,$genres,$side_bar_menu,'index');
+renderLayout($templateContent,$genres,$sideBarMenu,'index');

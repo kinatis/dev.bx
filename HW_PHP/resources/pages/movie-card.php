@@ -1,7 +1,7 @@
 <?php
 /** @var array $movies */
-?>
 
+?>
 
 <div class="movie-list--item">
         <div class="movie-list--item-overlay">
@@ -10,7 +10,7 @@
         <div class="movie-list--item-img" style="background-image: url(resources/image/<?=$movies['id']?>.jpg)"> </div>
 
         <div class="movie-list--item-head">
-            <div class="movie-list--item--title"><?= $movies['title']   ?></div>
+            <div class="movie-list--item--title"><?= $movies['title']   ?>  (<?= $movies['release-date']?>)</div>
             <div class="movie-list--item--subtitle"><?= $movies['original-title']   ?></div>
             <div class="movie-list--item-wrapper"></div>
         </div>
@@ -24,7 +24,7 @@
                     </svg></div>
                 <p><?= $movies['duration']   ?>м</p>
             </div>
-            <div class="movie-list--item-info"><?= $movies['genres'][0].", ".$movies['genres'][1].", ".$movies['genres'][2]   ?></div>
+            <div class="movie-list--item-info"><?=implode(', ', cutGenresList($movies['genres'],3)); ?></div>
         </div>
 
 </div>
