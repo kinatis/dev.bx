@@ -2,5 +2,5 @@
 
 $sideBarMenu = [
     'index' => "Главная",
-    'selected' => "Избранное"
+    'favorite' => "Избранное"
 ];

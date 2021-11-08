@@ -8,23 +8,46 @@ $templateContent = "";
 
 
 
+if ($_GET['genre'] !== null)
+{
+    $genre = $genres[$_GET['genre']];
+    $filteredMovies = filterMovieByGenre($movies,$genre);
+}
+
+if (empty($filteredMovies))
+{
+    $filteredMovies = $movies;
+}
+
+
 
 
 if (isset($_GET['search']))
 {
-    if(!empty($_GET['search'])){
-        $movies = findMovieByTitle($movies,$_GET['search']);
+    if(!empty($_GET['search']))
+    {
+        $filteredMovies = findMovieByTitle($filteredMovies,$_GET['search']);
     }
 }
-if(!$movies){
+
+
+
+
+
+if(!$filteredMovies){
     $templateContent.=renderTemplate("./resources/pages/empty-movie-list.php");
 }
-
-
-foreach ($movies as $movie)
+else
 {
-    $templateContent = $templateContent.renderTemplate("./resources/pages/movie-card.php", ['movies' => $movie]);
+    $templateContent = $templateContent.renderTemplate("./resources/pages/movie-card.php", ['movies' => $filteredMovies]);
 }
 
 
-renderLayout($templateContent,$genres,$sideBarMenu,'index');
+if(isset($_GET['genre']))
+{
+    renderLayout($templateContent,$genres,$sideBarMenu,$_GET['genre']);
+}
+else
+{
+    renderLayout($templateContent,$genres,$sideBarMenu,"index");
+}

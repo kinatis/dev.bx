@@ -1,69 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4d4a37f4-c4fa-4b48-abfc-2f5136345b6e" name="Changes" comment="Перемещение дз по вёрсте в отдельную директорию">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dev.bx.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/.idea/Dev.bx.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/.idea/Dev.bx.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/HW/hw.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/HW/hw.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/add-film.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/add-film.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/config/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/config/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/film-card.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/film-card.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/filtered-movie-list.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/filtered-movie-list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/lib/movie-list-function.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/lib/movie-list-function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/lib/template-function.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/lib/template-function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/12.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/13.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/14.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/15.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/16.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/17.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/18.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/19.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/20.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/21.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/22.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/23.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/23.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/24.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/24.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/25.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/25.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/26.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/26.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/27.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/27.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/28.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/28.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/29.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/29.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/30.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/30.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/image/9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/image/9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/movies.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/movies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/pages/empty-movie-list.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/pages/empty-movie-list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/pages/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/pages/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/pages/menu-item.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/pages/menu-item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/pages/more-film.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/pages/more-film.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/pages/movie-card.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/pages/movie-card.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/styles/more-film.css" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/styles/more-film.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/styles/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/styles/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/resources/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP и вёрстка - многостраничный сайт/selected.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/selected.php" afterDir="false" />
+    <list default="true" id="4d4a37f4-c4fa-4b48-abfc-2f5136345b6e" name="Changes" comment="Перемещение дз по php и вёрстке в отдельную директорию">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_PHP/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_PHP/film-card.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/film-card.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_PHP/filtered-movie-list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_PHP/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_PHP/lib/movie-list-function.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/lib/movie-list-function.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_PHP/resources/pages/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/pages/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_PHP/resources/pages/more-film.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/pages/more-film.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_PHP/resources/pages/movie-card.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/pages/movie-card.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_PHP/resources/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/resources/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_PHP/selected.php" beforeDir="false" afterPath="$PROJECT_DIR$/HW_PHP/favorite.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="20dMsFm0OABojqIjeyMlo0ZfZ7e" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -98,7 +48,7 @@
       <updated>1636370218210</updated>
       <workItem from="1636370221258" duration="302000" />
       <workItem from="1636379809255" duration="919000" />
-      <workItem from="1636380757458" duration="5053000" />
+      <workItem from="1636380757458" duration="14331000" />
     </task>
     <task id="LOCAL-00001" summary="Перемещение дз по вёрсте в отдельную директорию">
       <created>1636379887028</created>
@@ -114,7 +64,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636379930800</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Перемещение дз по php и вёрстке в отдельную директорию">
+      <created>1636388544131</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1636388544131</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +91,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Перемещение дз по вёрсте в отдельную директорию" />
-    <option name="LAST_COMMIT_MESSAGE" value="Перемещение дз по вёрсте в отдельную директорию" />
+    <MESSAGE value="Перемещение дз по php и вёрстке в отдельную директорию" />
+    <option name="LAST_COMMIT_MESSAGE" value="Перемещение дз по php и вёрстке в отдельную директорию" />
   </component>
 </project>

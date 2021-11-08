@@ -18,13 +18,14 @@
     <div class="wrapper">
         <div class="sidebar">
             <div class="wrapper-logo">
-                <div class="ellipse-wrapper">
-                    <div class="ellipse">
+                <a href="index.php">
+                    <div class="ellipse-wrapper">
+                        <div class="ellipse">
 
+                        </div>
                     </div>
-                </div>
-                <div class="logo">bitflix</div>
-
+                    <div class="logo">bitflix</div>
+                </a>
             </div>
 
 
@@ -36,13 +37,13 @@
 
                     <?php foreach ($genres as $key => $name):?>
                     <li class="menu-item <?= $currentPage == $key ? " menu-item--active": "" ?>">
-                        <a href="filtered-movie-list.php?<?=$key?>"><?=$name ?></a>
+                        <a href="index.php?genre=<?=$key?>"><?=$name ?></a>
                     </li>
                     <?php endforeach;  ?>
 
 
-                    <li class="menu-item <?= $currentPage == 'selected' ? " menu-item--active": "" ?> ">
-                        <a href="selected.php"><?=$config['selected'] ?></a>
+                    <li class="menu-item <?= $currentPage == 'favorite' ? " menu-item--active": "" ?> ">
+                        <a href="favorite.php"><?=$config['favorite'] ?></a>
                     </li>
                 </ul>
 

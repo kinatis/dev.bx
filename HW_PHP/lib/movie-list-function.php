@@ -8,11 +8,12 @@ function filterMovieByGenre(array $movies, string $genre): array
    $result = [];
    foreach ($movies as $movie)
    {
+
        foreach ($movie['genres'] as $genres)
        {
            if ($genres === $genre)
            {
-            array_push($result,$movie);
+                $result[]= $movie;
            }
        }
    }
@@ -21,26 +22,30 @@ function filterMovieByGenre(array $movies, string $genre): array
 }
 
 
-function findMovieById( array $movies, string $id):array
+function findMovieById( array $movies, int $id):array
 {
 
+
     foreach ($movies as $movie){
-        if ($movie['id'] === str($id))
+        if ($movie['id'] === $id)
         {
             return $movie;
         }
     }
+
     return [];
 }
 function findMovieByTitle(array $movies, string $title):array
 {
     $result = [];
-    
+    $title = mb_strtolower($title,"UTF-8");
 
     foreach ($movies as $movie){
-        if (stripos($movie['title'],$title)!==false)
+        $movieTitle = mb_strtolower($movie['title']);
+
+        if (stripos($movieTitle, $title) !==false)
         {
-           $result[] =$movie;
+           $result[] = $movie;
         }
 
     }

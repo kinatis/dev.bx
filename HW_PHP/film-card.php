@@ -6,8 +6,8 @@ require "config/config.php";
 
 $templateContent = "";
 
-$get = array_key_first($_GET);
-$movie= findMovieById($movies,$get);
+
+$movie= findMovieById($movies,(string)$_GET['id']);
 
 $templateContent = renderTemplate("./resources/pages/more-film.php",['movie' => $movie]);
 

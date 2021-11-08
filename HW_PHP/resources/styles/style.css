@@ -279,12 +279,13 @@ body {
 .movie-list--item-description {
 
 
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    height: 100px;
 
+
+    margin: 0; /* Убираем внешний отступ */
+    -webkit-line-clamp: 4; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden;
 
 
     font-family: "Open Sans";
@@ -296,7 +297,7 @@ body {
     margin: 15px;
 }
 .movie-list--item-bottom {
-    height: 50px;
+    height: 25px;
     display: flex;
     font-family: "Open Sans";
     font-style: normal;
@@ -305,12 +306,16 @@ body {
     line-height: 22px;
     justify-content: space-between;
     color: rgb(204, 204, 204);
-    margin: 15px;
+    margin: 0px 15px 10px 15px;
 }
 .movie-list--item-time {
+
     display: flex;
 }
 
 .Shtuka{
     font-size: 30px;
+}
+.icon-clock{
+    margin-right: 5px;
 }

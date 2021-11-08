@@ -10,4 +10,4 @@ $templateContent = "";
 
 
 
-renderLayout($templateContent, $genres, $sideBarMenu, 'selected');
+renderLayout($templateContent, $genres, $sideBarMenu,"favorite");
