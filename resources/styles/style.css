@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import "more-film.css";
+body {
+    font-family: "Open Sans", sans-serif;
+}
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    overflow: scroll;
+    display: block;
+    background-color: rgb(56, 56, 56);
+    width: 400px;
+}
+
+.ellipse-wrapper .ellipse {
+    position: relative;
+    display: flex;
+    width: 398px;
+    height: 79px;
+    background-color: rgb(56, 56, 56);
+    z-index: 100;
+    margin: 110px 15px 15px;
+    border-radius: 389px / 79px;
+}
+
+.ellipse-wrapper {
+    display: flex;
+    height: 0px;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.logo {
+    position: relative;
+    height: 150px;
+    font-family: "Bebas Neue", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: space-around;
+    color: rgb(67, 176, 237);
+    z-index: 1;
+    margin: 15px;
+}
+.menu {
+    margin: 30px;
+}
+
+.menu-item--active {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.menu-item {
+    display: block;
+    border-bottom: 1px solid rgba(242, 242, 242, 0.1);
+}
+
+.menu-item a {
+    padding-left: 10px;
+    display: flex;
+    height: 70px;
+    color: rgb(183, 183, 183);
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    align-items: center;
+    text-decoration: none;
+}
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.menu-item:last-child {
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+.container {
+    display: flex;
+    width: 100vh;
+    flex-direction: column;
+    flex: 1;
+}
+
+.wrapper-search--bar {
+    display: flex;
+    width: 700px;
+    align-items: flex-end;
+    margin: 30px 0px 15px 40px;
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.search-btn--wrapper{
+
+}
+
+.search-btn--wrapper input {
+    text-align: center;
+    height: 40px;
+    width: 80px;
+    margin: 43px 15px 0px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    background: rgb(231, 160, 78);
+    border-radius: 7px;
+
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+}
+.search-btn--wrapper input:active {
+    background: rgb(222, 154, 75);
+}
+.addFilm-btn--wrapper{
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 150px;
+    margin: 43px 20px 0px 0px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    background: rgb(78, 231, 176);
+    border-radius: 7px;
+}
+.addFilm-btn--wrapper:active {
+    background: rgb(71, 211, 161);
+}
+.addFilm-btn--wrapper a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.search-icon{
+    display: flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+}
+.search-bar {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 40px;
+    height: 40px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+.header {
+    display: flex;
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 4px;
+    background: rgb(255, 255, 255);
+    justify-content: space-between;
+}
+
+.content {
+    overflow: auto;
+    display: flex;
+    height: 100vh;
+    background: rgb(204, 204, 204);
+    align-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.movie-list--item-more{
+    background: #4EE7B0;
+    border-radius: 7px;
+
+    width: 220px;
+    height: 56px;
+
+    text-decoration: none;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 56px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.movie-list--item-overlay{
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    z-index: 10;
+
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.movie-list--item-overlay:hover{
+    opacity: 1;
+}
+
+.movie-list--item {
+    position: relative;
+    width: 370px;
+    height: 700px;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    margin: 15px;
+    border-radius: 20px;
+}
+.movie-list--item-img {
+    height: 430px;
+    background-size: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.movie-list--item-head {
+    margin: 15px;
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.movie-list--item--title {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    color: rgb(51, 51, 51);
+}
+
+.movie-list--item--subtitle {
+    margin-bottom: 15px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    color: rgb(153, 153, 153);
+}
+.movie-list--item-description {
+
+
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 100px;
+
+
+
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(51, 51, 51);
+    margin: 15px;
+}
+.movie-list--item-bottom {
+    display: flex;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    justify-content: space-between;
+    color: rgb(204, 204, 204);
+    margin: 15px;
+}
+.movie-list--item-time {
+    display: flex;
+}
+
+.Shtuka{
+    font-size: 30px;
+}
