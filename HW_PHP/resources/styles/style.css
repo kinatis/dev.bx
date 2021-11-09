@@ -10,6 +10,7 @@ body {
 }
 
 .sidebar {
+    min-width: 400px;
     overflow: scroll;
     display: block;
     background-color: rgb(56, 56, 56);
