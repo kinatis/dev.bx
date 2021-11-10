@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 
 
 function filterMovieByGenre(array $movies, string $genre): array

@@ -1,7 +1,8 @@
 <?php
 /** @var string $content */
 /** @var array $genres */
-
+/** @var string $currentPage */
+/** @var array $config */
 ?>
 
 
@@ -36,13 +37,13 @@
                     </li>
 
                     <?php foreach ($genres as $key => $name):?>
-                    <li class="menu-item <?= $currentPage == $key ? " menu-item--active": "" ?>">
+                    <li class="menu-item <?= $currentPage === $key ? " menu-item--active": "" ?>">
                         <a href="index.php?genre=<?=$key?>"><?=$name ?></a>
                     </li>
                     <?php endforeach;  ?>
 
 
-                    <li class="menu-item <?= $currentPage == 'favorite' ? " menu-item--active": "" ?> ">
+                    <li class="menu-item <?= $currentPage === 'favorite' ? " menu-item--active": "" ?> ">
                         <a href="favorite.php"><?=$config['favorite'] ?></a>
                     </li>
                 </ul>
