@@ -7,10 +7,10 @@
     <div class="header-movie-card-wrapper">
         <div class="header-movie--card">
             <div class="movie-title-wrapper">
-                <div class="movie-title"><?= $movie["title"]?>(<?= $movie['release-date']?>)</div>
+                <div class="movie-title"><?= $movie["TITLE"]?>(<?= $movie['RELEASE_DATE']?>)</div>
                 <div class="movie-subtitle-wrapper">
-                    <div class="movie-subtitle"><?= $movie["original-title"]?></div>
-                    <div class="age-restriction">+<?= $movie['age-restriction']?></div>
+                    <div class="movie-subtitle"><?= $movie["ORIGINAL_TITLE"]?></div>
+                    <div class="age-restriction">+<?= $movie['AGE_RESTRICTION']?></div>
 
                 </div>
             </div>
@@ -25,42 +25,42 @@
     </div>
     <div class="info-movie-wrapper">
         <div class="image-wrapper">
-            <div class="image" style="background-image: url('resources/image/<?=$movie['id']?>.jpg')"> </div>
+            <div class="image" style="background-image: url('resources/image/<?=$movie['ID']?>.jpg')"> </div>
         </div>
         <div class="info-movie">
             <div class="movie-rating">
                 <div class="rectangle-wrapper">
                     <?php for ($i = 1; $i <= 10; $i++){  ?>
-                    <div class="rectangle <?php if($i < $movie['rating']){ echo 'rectangle-active';} ?>"></div>
+                    <div class="rectangle <?php if($i < $movie['RATING']){ echo 'rectangle-active';} ?>"></div>
                     <?php } ?>
                 </div>
 
-                <div class="circle"><?= $movie['rating']?></div>
+                <div class="circle"><?= $movie['RATING']?></div>
             </div>
             <div class="about-movie-wrapper">
                 <div class="about-movie-title">О фильме</div>
                 <div class="about-movie">
                     <div class="about-movie--item-wrapper">
                         <div class="director left">Режиссёр</div>
-                        <div class="director right"><?= $movie['director']  ?></div>
+                        <div class="director right"><?= $movie['NAME']  ?></div>
                     </div>
 
                     <div class="about-movie--item-wrapper">
                         <div class="release-date left">Дата выхода</div>
-                        <div class="release-date right"><?= $movie['release-date']  ?></div>
+                        <div class="release-date right"><?= $movie['RELEASE_DATE']  ?></div>
                     </div>
 
                     <div class="about-movie--item-wrapper">
                             <div class="cast left">В главных ролях:</div>
 
-                            <div class="cast right"><?=implode(', ', $movie['cast'])  ?></div>
+                            <div class="cast right"><?=$movie['actor'] ?></div>
                     </div>
                 </div>
 
             </div>
             <div class="description-wrapper">
                 <div class="description-title">Описание</div>
-                <div class="description"><?= $movie['description']  ?></div>
+                <div class="description"><?= $movie['DESCRIPTION']  ?></div>
             </div>
         </div>
     </div>

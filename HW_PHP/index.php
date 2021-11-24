@@ -1,57 +1,39 @@
 <?php
 declare(strict_types=1);
 
+/** @var array $sqlConnect */
+/** @var array $sideBarMenu */
+
 require "lib/template-function.php";
 require "resources/movies.php";
 require "config/config.php";
 require "lib/movie-list-function.php";
-
+require_once "lib/db-function.php";
 
 
 $templateContent = "";
 
+$db = dbConnection($sqlConnect);
 
+$moviesList = getMoviesList($db,getGenresList($db));
 
-if ($_GET['genre'] !== null)
+// Рендер шаблона
+if(!$moviesList)
 {
-    $genre = $genres[$_GET['genre']];
-    $filteredMovies = filterMovieByGenre($movies,$genre);
-}
-
-if (empty($filteredMovies))
-{
-    $filteredMovies = $movies;
-}
-
-
-
-
-if (isset($_GET['search']))
-{
-    if(!empty($_GET['search']))
-    {
-        $filteredMovies = findMovieByTitle($filteredMovies,$_GET['search']);
-    }
-}
-
-
-
-
-
-if(!$filteredMovies){
     $templateContent.=renderTemplate("./resources/pages/empty-movie-list.php");
 }
 else
 {
-    $templateContent = $templateContent.renderTemplate("./resources/pages/movie-card.php", ['movies' => $filteredMovies]);
+    $templateContent = $templateContent.renderTemplate("./resources/pages/movie-card.php", ['movies' => $moviesList,'genres' => getGenresList($db)]);
 }
 
 
 if(isset($_GET['genre']))
 {
-    renderLayout($templateContent,$genres,$sideBarMenu,$_GET['genre']);
+
+    renderLayout($templateContent,getGenresList($db),$sideBarMenu,$_GET['genre']);
 }
 else
 {
-    renderLayout($templateContent,$genres,$sideBarMenu,"index");
+    renderLayout($templateContent,getGenresList($db),$sideBarMenu,"index");
 }

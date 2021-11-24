@@ -36,9 +36,9 @@
                         <a href="index.php"><?=$config['index'] ?></a>
                     </li>
 
-                    <?php foreach ($genres as $key => $name):?>
-                    <li class="menu-item <?= $currentPage === $key ? " menu-item--active": "" ?>">
-                        <a href="index.php?genre=<?=$key?>"><?=$name ?></a>
+                    <?php foreach ($genres as $id =>$genre):?>
+                    <li class="menu-item <?= $currentPage === $genre['CODE'] ? " menu-item--active": "" ?>">
+                        <a href="index.php?genre=<?=$genre['CODE']?>"><?=$genre['NAME'] ?></a>
                     </li>
                     <?php endforeach;  ?>
 
