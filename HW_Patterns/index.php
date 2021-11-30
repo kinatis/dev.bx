@@ -57,6 +57,20 @@ $calculatePower = function ($sum, $warrior)
 
 $build = new \Army\Builder\ArcherBuilder();
 
-var_dump(\Army\Builder\Director::build($build));
+$weaponBarbarianBuild = new \Army\Weapon\BarbarianWeaponForge();
+$rangeBarbarianWeapon = $weaponBarbarianBuild->createRangeWeapon();
 
-$build->addLeftHandArmor()->getWarrior();
+$weaponRomeBuild = new \Army\Weapon\RomeWeaponForge();
+$meleeWeapon = $weaponRomeBuild->createMeleeWeapon();
+
+
+
+
+var_dump($build->
+        createWarriorTemplate()->
+        addRightHandWeapon($rangeBarbarianWeapon)->
+        addLeftHandWeapon($meleeWeapon));
+
+
+
+
