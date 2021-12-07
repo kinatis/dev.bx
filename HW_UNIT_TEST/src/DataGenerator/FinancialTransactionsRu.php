@@ -2,6 +2,8 @@
 
 namespace App\DataGenerator;
 
+use function PHPUnit\Framework\isEmpty;
+
 /**
  * This class implements "Standards of financial transactions. Two-dimensional barcode symbols for payments by individuals"
  *
@@ -75,6 +77,7 @@ final class FinancialTransactionsRu
 	public const ERROR_CODE_MANDATORY_FIELD_IS_NOT_FILLED = 101;
 	public const ERROR_CODE_VALUE_IS_TOO_LONG = 102;
 	public const ERROR_CODE_VALUE_INCORRECT_TYPE = 103;
+    public const ERROR_CODE_VALUE_EMPTY_VALUE = 104;
 
 	protected const VALUE_DELIMITER = '=';
 
@@ -84,9 +87,10 @@ final class FinancialTransactionsRu
 	public function __construct()
 	{
 		$this->charsetCode = self::CHARSET_UTF8;
-
 		$this->fields = [];
 	}
+
+
 
 	public function setFields(array $fields): self
 	{
@@ -144,6 +148,9 @@ final class FinancialTransactionsRu
 		return $this;
 	}
 
+
+
+
 	public function validate(): \App\Result
 	{
 		$result = new \App\Result();
@@ -186,6 +193,19 @@ final class FinancialTransactionsRu
 				);
 			}
 		}
+        foreach ($this->fields as $fieldName => $value)
+        {
+            if(!strlen(trim($value))){
+                $result->addError(
+                    new \Error(
+                        'The value of ' . $fieldName . ' is empty',
+                        self::ERROR_CODE_VALUE_EMPTY_VALUE,
+                    )
+                );
+            }
+        }
+
+
 
 		return $result;
 	}
@@ -255,7 +275,7 @@ final class FinancialTransactionsRu
 		$allValues = implode(' ', $this->fields);
 		foreach ($possibleDelimiters as $delimiter)
 		{
-			if (!mb_strpos($allValues, $delimiter))
+			if (mb_strpos($allValues, $delimiter)===false)
 			{
 				return $delimiter;
 			}

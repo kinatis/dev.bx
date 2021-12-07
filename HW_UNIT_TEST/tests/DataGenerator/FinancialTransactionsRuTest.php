@@ -116,7 +116,7 @@ class FinancialTransactionsRuTest extends \PHPUnit\Framework\TestCase
         $dataGenerator->setFields($fields);
         $data = $dataGenerator->getData();
 
-        static::assertEquals('ST00012|Name=|PersonalAcc=|BankName=|BIC=|CorrespAcc=', $data);
+        static::assertEquals('ST00012~Name=|~PersonalAcc=|~BankName=|~BIC=|~CorrespAcc=|', $data);
     }
 
     public function testPickupTwoDelimiterFromGetData():void
