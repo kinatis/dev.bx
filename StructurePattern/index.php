@@ -14,4 +14,7 @@ $calculator = new \Service\AdvCalculator($advertisement);
 $calculator->applyCost();
 
 $calculator = new \Decorator\VatCostDecorator($calculator);
-var_dump($calculator->applyCost()->getTotalCost());
+
+$advertisement = new \Decorator\AdvertisementDecorator($advertisement);
+
+var_dump($advertisement->prepareAdvertisementMassage()->getAdvertisementMassage());
