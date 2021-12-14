@@ -18,20 +18,23 @@ spl_autoload_register(function ($class) {
 //	->add()
 //	->update()
 //;
+\Event\EventBus::getInstance()->subscribe("setIsStrange","\Helper\StrangeState::onSetIsStrange");
+$service = new Service();
+$context = new \State\ServiceStateContext(new \State\ActiveState($service));
 
-//$service = new Service();
-//$context = new \State\ServiceStateContext(new \State\ActiveState($service));
-//
-//var_dump($context);
-//var_dump($context->changeState());
-//var_dump($context->changeState());
+var_dump($context);
+var_dump($context->changeState());
+var_dump($context->changeState());
+var_dump($context->changeState());
+$context->getState()->strange();
+
 
 //function purchasePremiumLite()
 //{
-	var_dump(\Strategy\PurchaseServiceContext::purchase(new \Strategy\PurchasePremiumLiteStrategy()));
+//	var_dump(\Strategy\PurchaseServiceContext::purchase(new \Strategy\PurchasePremiumLiteStrategy()));
 //}
 
 //function purchasePremium($type)
 //{
-	var_dump(\Strategy\PurchaseServiceContext::purchase(new \Strategy\PurchasePremiumStrategy()));
+//	var_dump(\Strategy\PurchaseServiceContext::purchase(new \Strategy\PurchasePremiumStrategy()));
 //}

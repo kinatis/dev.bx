@@ -26,4 +26,9 @@ class PausedState extends AbstractState
 	{
 		return new CanceledState($this->service);
 	}
+
+    public function strange()
+    {
+
+    }
 }

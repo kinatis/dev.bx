@@ -19,6 +19,11 @@ class CanceledState extends AbstractState
 
 	public function changeState()
 	{
-		return $this;
+		return new StrangeState($this->service);
 	}
+
+    public function strange()
+    {
+
+    }
 }

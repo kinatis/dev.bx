@@ -14,7 +14,7 @@ class Service
 	private $activatedUntil;
 	private $pausedAd;
 	private $canceledDate;
-
+    private $isStrange;
 	private $type;
 
 	/**
@@ -124,4 +124,21 @@ class Service
 		$this->type = $type;
 		return $this;
 	}
+
+    /**
+     * @return mixed
+     */
+    public function getIsStrange()
+    {
+        return $this->isStrange;
+    }
+
+    /**
+     * @param mixed $isStrage
+     */
+    public function setIsStrange($isStrange)
+    {
+        $this->isStrange = $isStrange;
+        return $this;
+    }
 }

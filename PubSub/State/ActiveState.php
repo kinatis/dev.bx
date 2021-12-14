@@ -25,4 +25,9 @@ class ActiveState extends AbstractState
 	{
 		return new PausedState($this->service);
 	}
+
+    public function strange()
+    {
+
+    }
 }
